@@ -45,7 +45,9 @@ const config = {
     renderer.vite({
       preloadEntry: join(PACKAGE_ROOT, '../preload/src/index.ts'),
     }),
-    unocss({/* options */}),
+    unocss({
+      /* options */
+    }),
   ],
 };
 
