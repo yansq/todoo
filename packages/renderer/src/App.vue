@@ -2,6 +2,19 @@
 import ReactiveCounter from '/@/components/ReactiveCounter.vue';
 import ReactiveHash from '/@/components/ReactiveHash.vue';
 import ElectronVersions from '/@/components/ElectronVersions.vue';
+import TaskList from '/@/components/TaskList.vue';
+import { NSpace ,NLayout, NLayoutSider, NLayoutContent } from 'naive-ui';
+
+const data = [{
+  id: 1,
+  name: 'test1',
+}, {
+  id: 2,
+  name: 'test2',
+}, {
+  id: 3,
+  name: 'test3',
+}];
 </script>
 
 <template>
@@ -10,6 +23,29 @@ import ElectronVersions from '/@/components/ElectronVersions.vue';
     src="../assets/logo.svg"
     width="150"
   />
+  <n-space 
+    vertical 
+    size="large"
+  >
+    <n-layout has-sider>
+      <n-layout-sider
+        collapse-mode="width"
+        :collapsed-width="120"
+        :width="240"
+        show-trigger="arrow-circle"
+        content-style="padidng: 24px;"
+        bordered
+      >
+        <div>
+          layout sider
+        </div>
+      </n-layout-sider>
+      <n-layout-content content-style="padding: 24px;">
+        main content
+        <task-list :list-items="data"></task-list>
+      </n-layout-content>
+    </n-layout>
+  </n-space>
 
   <p>
     For a guide and recipes on how to configure / customize this project,<br />

@@ -4,7 +4,7 @@ import {chrome} from '../../.electron-vendors.cache.json';
 import {join} from 'path';
 import vue from '@vitejs/plugin-vue';
 import {renderer} from 'unplugin-auto-expose';
-import unocss from 'unocss';
+import unocss from 'unocss/vite';
 
 const PACKAGE_ROOT = __dirname;
 
