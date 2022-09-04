@@ -3,18 +3,22 @@ import ReactiveCounter from '/@/components/ReactiveCounter.vue';
 import ReactiveHash from '/@/components/ReactiveHash.vue';
 import ElectronVersions from '/@/components/ElectronVersions.vue';
 import TaskList from '/@/components/TaskList.vue';
-import { NSpace ,NLayout, NLayoutSider, NLayoutContent } from 'naive-ui';
+import {NSpace, NLayout, NLayoutSider, NLayoutContent} from 'naive-ui';
 
-const data = [{
-  id: 1,
-  name: 'test1',
-}, {
-  id: 2,
-  name: 'test2',
-}, {
-  id: 3,
-  name: 'test3',
-}];
+const data = [
+  {
+    id: 1,
+    name: 'test1',
+  },
+  {
+    id: 2,
+    name: 'test2',
+  },
+  {
+    id: 3,
+    name: 'test3',
+  },
+];
 </script>
 
 <template>
@@ -23,8 +27,8 @@ const data = [{
     src="../assets/logo.svg"
     width="150"
   />
-  <n-space 
-    vertical 
+  <n-space
+    vertical
     size="large"
   >
     <n-layout has-sider>
@@ -36,9 +40,7 @@ const data = [{
         content-style="padidng: 24px;"
         bordered
       >
-        <div>
-          layout sider
-        </div>
+        <div> layout sider </div>
       </n-layout-sider>
       <n-layout-content content-style="padding: 24px;">
         main content

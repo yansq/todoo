@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-
-  export interface ListItem {
-    name: string;
-    id: number;
-  }
-  const props = defineProps<{ listItem: ListItem }>();
+export interface ListItem {
+  name: string;
+  id: number;
+}
+const props = defineProps<{listItem: ListItem}>();
 </script>
 
 <template>
