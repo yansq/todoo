@@ -2,7 +2,7 @@ import {createStore} from 'vuex';
 import {todoStorage} from '/@/commons/electronStore';
 import mutations from '/@/store/mutations';
 
- const store = createStore({
+const store = createStore({
   state() {
     todoStorage.getTodoList;
   },

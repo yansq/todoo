@@ -2,12 +2,12 @@ import {M_ADD_TODO_LIST_ITEM} from '/@/store/types';
 import {todoStorage} from '/@/commons/electronStore';
 
 const mutations = {
-  [M_ADD_TODO_LIST_ITEM](state:any, data:any) {
+  [M_ADD_TODO_LIST_ITEM](state: any, data: any) {
     if (!data) {
       todoStorage.setTodoList = state.todoData;
     } else {
       if (data.item.id) {
-        state.todoData.map((item:any) => {
+        state.todoData.map((item: any) => {
           if (item.id == data.item.id) {
             item = data.item;
           }
