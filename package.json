@@ -36,10 +36,10 @@
     "cross-env": "7.0.3",
     "electron": "20.1.0",
     "electron-builder": "23.3.3",
+    "electron-store": "^8.1.0",
     "eslint": "8.23.0",
     "eslint-plugin-vue": "9.4.0",
     "happy-dom": "6.0.4",
-    "idb": "^7.0.2",
     "naive-ui": "^2.33.2",
     "nano-staged": "0.8.0",
     "playwright": "1.25.1",
@@ -54,7 +54,10 @@
   },
   "dependencies": {
     "electron-updater": "5.2.1",
+    "moment": "^2.29.4",
+    "path-browserify": "^1.0.1",
     "vue": "3.2.37",
-    "vuedraggable": "^4.1.0"
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.0.2"
   }
 }

@@ -17,6 +17,7 @@ const config = {
   root: PACKAGE_ROOT,
   resolve: {
     alias: {
+      path: 'path-browserify',
       '/@/': join(PACKAGE_ROOT, 'src') + '/',
     },
   },

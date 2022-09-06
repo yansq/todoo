@@ -37,7 +37,7 @@ const data = [
         :collapsed-width="120"
         :width="240"
         show-trigger="arrow-circle"
-        content-style="padidng: 24px;"
+        content-style="padding: 24px;"
         bordered
       >
         <div> layout sider </div>
