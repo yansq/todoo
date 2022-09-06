@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import ReactiveCounter from '/@/components/ReactiveCounter.vue';
-import ReactiveHash from '/@/components/ReactiveHash.vue';
-import ElectronVersions from '/@/components/ElectronVersions.vue';
-import TaskList from '/@/components/TaskList.vue';
-import {NButton, NSpace, NLayout, NLayoutSider, NLayoutContent} from 'naive-ui';
+import ReactiveCounter from '/@/components/ReactiveCounter.vue'
+import ReactiveHash from '/@/components/ReactiveHash.vue'
+import ElectronVersions from '/@/components/ElectronVersions.vue'
+import TaskList from '/@/components/TaskList.vue'
+import { NButton, NLayout, NLayoutContent, NLayoutSider, NSpace } from 'naive-ui'
 
 const data = [
   {
@@ -18,7 +18,7 @@ const data = [
     id: 3,
     name: 'test3',
   },
-];
+]
 </script>
 
 <template>
@@ -28,18 +28,18 @@ const data = [
     width="150"
   />
   <div flex>
-    <n-button type="primary">Add Task</n-button>
+    <NButton type="primary">Add Task</NButton>
   </div>
   <div
     flex
     justify-center
   >
-    <n-space
+    <NSpace
       vertical
       size="large"
     >
-      <n-layout has-sider>
-        <n-layout-sider
+      <NLayout has-sider>
+        <NLayoutSider
           collapse-mode="width"
           :collapsed-width="120"
           :width="240"
@@ -48,13 +48,13 @@ const data = [
           bordered
         >
           <div> layout sider </div>
-        </n-layout-sider>
-        <n-layout-content content-style="padding: 24px;">
+        </NLayoutSider>
+        <NLayoutContent content-style="padding: 24px;">
           main content
-          <task-list :list-items="data"></task-list>
-        </n-layout-content>
-      </n-layout>
-    </n-space>
+          <TaskList :list-items="data"></TaskList>
+        </NLayoutContent>
+      </NLayout>
+    </NSpace>
   </div>
 
   <p>
@@ -71,17 +71,17 @@ const data = [
 
   <fieldset>
     <legend>Test Vue Reactivity</legend>
-    <reactive-counter />
+    <ReactiveCounter />
   </fieldset>
 
   <fieldset>
     <legend>Test Node.js API</legend>
-    <reactive-hash />
+    <ReactiveHash />
   </fieldset>
 
   <fieldset>
     <legend>Environment</legend>
-    <electron-versions />
+    <ElectronVersions />
   </fieldset>
 
   <p>
