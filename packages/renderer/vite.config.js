@@ -1,16 +1,16 @@
 /* eslint-env node */
 
-import {join} from 'path';
-import vue from '@vitejs/plugin-vue';
-import {renderer} from 'unplugin-auto-expose';
-import Unocss from 'unocss/vite';
-import transformerDirective from '@unocss/transformer-directives';
-import presetAttributify from '@unocss/preset-attributify';
-import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx';
-import presetWind from '@unocss/preset-wind';
-import {chrome} from '../../.electron-vendors.cache.json';
+import { join } from 'path'
+import vue from '@vitejs/plugin-vue'
+import { renderer } from 'unplugin-auto-expose'
+import Unocss from 'unocss/vite'
+import transformerDirective from '@unocss/transformer-directives'
+import presetAttributify from '@unocss/preset-attributify'
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
+import presetWind from '@unocss/preset-wind'
+import { chrome } from '../../.electron-vendors.cache.json'
 
-const PACKAGE_ROOT = __dirname;
+const PACKAGE_ROOT = __dirname
 
 /**
  * @type {import('vite').UserConfig}
@@ -21,7 +21,7 @@ const config = {
   root: PACKAGE_ROOT,
   resolve: {
     alias: {
-      path: 'path-browserify',
+      'path': 'path-browserify',
       '/@/': `${join(PACKAGE_ROOT, 'src')}/`,
     },
   },
@@ -60,6 +60,6 @@ const config = {
       transformers: [transformerDirective(), transformerAttributifyJsx()],
     }),
   ],
-};
+}
 
-export default config;
+export default config

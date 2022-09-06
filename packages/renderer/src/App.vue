@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import ReactiveCounter from '/@/components/ReactiveCounter.vue';
-import ReactiveHash from '/@/components/ReactiveHash.vue';
-import ElectronVersions from '/@/components/ElectronVersions.vue';
-import TaskList from '/@/components/TaskList.vue';
-import {NButton, NLayout, NLayoutContent, NLayoutSider, NSpace} from 'naive-ui';
+import ReactiveCounter from '/@/components/ReactiveCounter.vue'
+import ReactiveHash from '/@/components/ReactiveHash.vue'
+import ElectronVersions from '/@/components/ElectronVersions.vue'
+import TaskList from '/@/components/TaskList.vue'
+import { NButton, NLayout, NLayoutContent, NLayoutSider, NSpace } from 'naive-ui'
 
 const data = [
   {
@@ -18,7 +18,7 @@ const data = [
     id: 3,
     name: 'test3',
   },
-];
+]
 </script>
 
 <template>

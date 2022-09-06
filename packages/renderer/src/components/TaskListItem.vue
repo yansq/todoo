@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 export interface ListItem {
-  name: string;
-  id: number;
+  name: string
+  id: number
 }
-const props = defineProps<{listItem: ListItem}>();
+
+// eslint-disable-next-line vue/define-macros-order
+const props = defineProps<{ listItem: ListItem }>()
 </script>
 
 <template>

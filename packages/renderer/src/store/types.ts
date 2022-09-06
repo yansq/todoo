@@ -1,1 +1,1 @@
-export const M_ADD_TODO_LIST_ITEM = 'M_ADD_TODO_LIST_ITEM';
+export const M_ADD_TODO_LIST_ITEM = 'M_ADD_TODO_LIST_ITEM'
