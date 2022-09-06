@@ -1,10 +1,7 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="header">
-    Todoo
-  </div>
+  <div class="header"> Todoo </div>
 </template>
 
 <style scoped>

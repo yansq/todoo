@@ -53,12 +53,11 @@ const config = {
     Unocss({
       presets: [
         presetWind(),
-        presetAttributify({ /* preset options */}),
+        presetAttributify({
+          /* preset options */
+        }),
       ],
-      transformers: [
-        transformerDirective(),
-        transformerAttributifyJsx(),
-      ],
+      transformers: [transformerDirective(), transformerAttributifyJsx()],
     }),
   ],
 };
