@@ -4,7 +4,11 @@ import {chrome} from '../../.electron-vendors.cache.json';
 import {join} from 'path';
 import vue from '@vitejs/plugin-vue';
 import {renderer} from 'unplugin-auto-expose';
-import unocss from 'unocss/vite';
+import Unocss from 'unocss/vite';
+import transformerDirective from '@unocss/transformer-directives';
+import presetAttributify from '@unocss/preset-attributify';
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx';
+import presetWind from '@unocss/preset-wind';
 
 const PACKAGE_ROOT = __dirname;
 
@@ -46,8 +50,15 @@ const config = {
     renderer.vite({
       preloadEntry: join(PACKAGE_ROOT, '../preload/src/index.ts'),
     }),
-    unocss({
-      /* options */
+    Unocss({
+      presets: [
+        presetWind(),
+        presetAttributify({ /* preset options */}),
+      ],
+      transformers: [
+        transformerDirective(),
+        transformerAttributifyJsx(),
+      ],
     }),
   ],
 };

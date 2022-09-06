@@ -3,7 +3,7 @@ import ReactiveCounter from '/@/components/ReactiveCounter.vue';
 import ReactiveHash from '/@/components/ReactiveHash.vue';
 import ElectronVersions from '/@/components/ElectronVersions.vue';
 import TaskList from '/@/components/TaskList.vue';
-import {NSpace, NLayout, NLayoutSider, NLayoutContent} from 'naive-ui';
+import {NButton, NSpace, NLayout, NLayoutSider, NLayoutContent} from 'naive-ui';
 
 const data = [
   {
@@ -27,27 +27,35 @@ const data = [
     src="../assets/logo.svg"
     width="150"
   />
-  <n-space
-    vertical
-    size="large"
+  <div flex>
+    <n-button type="primary">Add Task</n-button>
+  </div>
+  <div
+    flex
+    justify-center
   >
-    <n-layout has-sider>
-      <n-layout-sider
-        collapse-mode="width"
-        :collapsed-width="120"
-        :width="240"
-        show-trigger="arrow-circle"
-        content-style="padding: 24px;"
-        bordered
-      >
-        <div> layout sider </div>
-      </n-layout-sider>
-      <n-layout-content content-style="padding: 24px;">
-        main content
-        <task-list :list-items="data"></task-list>
-      </n-layout-content>
-    </n-layout>
-  </n-space>
+    <n-space
+      vertical
+      size="large"
+    >
+      <n-layout has-sider>
+        <n-layout-sider
+          collapse-mode="width"
+          :collapsed-width="120"
+          :width="240"
+          show-trigger="bar"
+          content-style="padding: 24px;"
+          bordered
+        >
+          <div> layout sider </div>
+        </n-layout-sider>
+        <n-layout-content content-style="padding: 24px;">
+          main content
+          <task-list :list-items="data"></task-list>
+        </n-layout-content>
+      </n-layout>
+    </n-space>
+  </div>
 
   <p>
     For a guide and recipes on how to configure / customize this project,<br />
@@ -89,12 +97,11 @@ const data = [
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 60px auto;
-  max-width: 700px;
+  margin: 0;
+  width: 100%;
 }
 
 fieldset {
-  margin: 2rem;
-  padding: 1rem;
+  @apply m-2rem p-1rem;
 }
 </style>
