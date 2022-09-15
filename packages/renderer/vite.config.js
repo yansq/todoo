@@ -8,6 +8,8 @@ import transformerDirective from '@unocss/transformer-directives'
 import presetAttributify from '@unocss/preset-attributify'
 import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 import presetWind from '@unocss/preset-wind'
+import AutoImport from 'unplugin-auto-import/vite'
+import Layouts from 'vite-plugin-vue-layouts'
 import { chrome } from '../../.electron-vendors.cache.json'
 
 const PACKAGE_ROOT = __dirname
@@ -47,8 +49,22 @@ const config = {
   },
   plugins: [
     vue(),
+    Layouts(),
     renderer.vite({
       preloadEntry: join(PACKAGE_ROOT, '../preload/src/index.ts'),
+    }),
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        'vue/macros',
+        '@vueuse/head',
+      ],
+      dts: './src/auto-imports.d.ts',
+      dirs: [
+        './src/store',
+      ],
+      vueTemplate: true,
     }),
     Unocss({
       presets: [

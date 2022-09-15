@@ -2,11 +2,10 @@
 import { computed } from 'vue'
 import Draggable from 'vuedraggable'
 import TaskListItem from '/@/components/TaskListItem.vue'
-import type { ListItem } from '/@/components/TaskListItem.vue'
+import { storeToRefs } from 'pinia'
 
-const props = defineProps<{
-  listItems: ListItem[]
-}>()
+const todoListData = todoListStore()
+const { todoList } = storeToRefs(todoListData)
 
 const dragOptions = computed(() => {
   return {
@@ -16,15 +15,20 @@ const dragOptions = computed(() => {
     ghostClass: 'ghost',
   }
 })
+
+const endDrag = () => {
+  todoListData.refresh()
+}
 </script>
 
 <template>
   <div class="clearfix">
     <Draggable
-      :list="props.listItems"
+      :list="todoList"
       v-bind="dragOptions"
       ghost-class="ghost"
       group="people1"
+      @end="endDrag"
     >
       <template #item="{ element }">
         <TaskListItem :list-item="element"></TaskListItem>
@@ -39,3 +43,4 @@ const dragOptions = computed(() => {
   background: #c8ebfb;
 }
 </style>
+

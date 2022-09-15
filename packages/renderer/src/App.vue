@@ -3,22 +3,8 @@ import ReactiveCounter from '/@/components/ReactiveCounter.vue'
 import ReactiveHash from '/@/components/ReactiveHash.vue'
 import ElectronVersions from '/@/components/ElectronVersions.vue'
 import TaskList from '/@/components/TaskList.vue'
-import { NButton, NLayout, NLayoutContent, NLayoutSider, NSpace } from 'naive-ui'
-
-const data = [
-  {
-    id: 1,
-    name: 'test1',
-  },
-  {
-    id: 2,
-    name: 'test2',
-  },
-  {
-    id: 3,
-    name: 'test3',
-  },
-]
+import ToolBar from '/@/components/ToolBar.vue'
+import { NLayout, NLayoutContent, NLayoutSider, NSpace } from 'naive-ui'
 </script>
 
 <template>
@@ -28,7 +14,7 @@ const data = [
     width="150"
   />
   <div flex>
-    <NButton type="primary">Add Task</NButton>
+    <ToolBar />
   </div>
   <div
     flex
@@ -50,8 +36,7 @@ const data = [
           <div> layout sider </div>
         </NLayoutSider>
         <NLayoutContent content-style="padding: 24px;">
-          main content
-          <TaskList :list-items="data"></TaskList>
+          <TaskList></TaskList>
         </NLayoutContent>
       </NLayout>
     </NSpace>

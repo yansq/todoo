@@ -20,7 +20,8 @@
     "test:preload": "vitest run -r packages/preload --passWithNoTests",
     "test:renderer": "vitest run -r packages/renderer --passWithNoTests",
     "watch": "node scripts/watch.mjs",
-    "lint": "eslint . --ext js,mjs,cjs,ts,mts,cts,vue",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "typecheck:main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck:preload": "tsc --noEmit -p packages/preload/tsconfig.json",
     "typecheck:renderer": "vue-tsc --noEmit -p packages/renderer/tsconfig.json",
@@ -35,6 +36,9 @@
     "@unocss/preset-wind": "^0.45.18",
     "@unocss/transformer-attributify-jsx": "^0.45.18",
     "@unocss/transformer-directives": "^0.45.18",
+    "@vicons/fluent": "^0.12.0",
+    "@vicons/ionicons4": "^0.12.0",
+    "@vicons/ionicons5": "^0.12.0",
     "@vitejs/plugin-vue": "3.0.3",
     "@vue/test-utils": "2.0.2",
     "cross-env": "7.0.3",
@@ -46,6 +50,7 @@
     "happy-dom": "6.0.4",
     "naive-ui": "^2.33.2",
     "nano-staged": "0.8.0",
+    "nanoid": "^4.0.0",
     "playwright": "1.25.1",
     "simple-git-hooks": "2.8.0",
     "typescript": "4.8.2",
@@ -53,6 +58,7 @@
     "unplugin-auto-expose": "0.0.2",
     "vfonts": "^0.0.3",
     "vite": "3.0.9",
+    "vite-plugin-vue-layouts": "^0.7.0",
     "vitest": "0.22.1",
     "vue-tsc": "0.40.4"
   },
@@ -60,8 +66,12 @@
     "electron-updater": "5.2.1",
     "moment": "^2.29.4",
     "path-browserify": "^1.0.1",
+    "pinia": "^2.0.22",
+    "unplugin-auto-import": "^0.11.2",
+    "vite-plugin-pages": "^0.26.0",
+    "vite-ssg": "^0.20.2",
     "vue": "3.2.37",
-    "vuedraggable": "^4.1.0",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.1.5",
+    "vuedraggable": "^4.1.0"
   }
 }

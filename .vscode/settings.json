@@ -1,6 +1,7 @@
 {
   "cSpell.words": ["Attributify", "Unocss"],
   "prettier.enable": false,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }

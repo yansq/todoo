@@ -1,19 +1,16 @@
-// import {getStore} from '/@/../../preload/src/electronStore';
-import {api} from '#preload';
+import { storeApi } from '#preload'
 
-const TODO_LIST_DATA = 'TODO_LIST_DATA';
+const TODO_LIST_DATA = 'TODO_LIST_DATA'
 
 // 访问器属性
 export const todoStorage = {
-  set setTodoList(val: any) {
-    if (!val) {
-      api.configStore.delete(TODO_LIST_DATA);
-    } else {
-      api.configStore.set(TODO_LIST_DATA, val);
-    }
+  set todoList(val: any) {
+    if (!val)
+      storeApi.configStore.delete(TODO_LIST_DATA)
+    else
+      storeApi.configStore.set(TODO_LIST_DATA, val)
   },
-  get getTodoList() {
-    api.configStore.set(TODO_LIST_DATA, 'aaa');
-    return api.configStore.get(TODO_LIST_DATA);
+  get todoList() {
+    return storeApi.configStore.get(TODO_LIST_DATA)
   },
-};
+}

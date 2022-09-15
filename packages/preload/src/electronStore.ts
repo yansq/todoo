@@ -1,13 +1,9 @@
 // import Store from 'electron-store';
-
 // const store = new Store();
 
-// export function getStore() {
-//   return store;
-// }
-
-const ConfigStore = require('electron-store');
-const configStore = new ConfigStore();
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const ConfigStore = require('electron-store')
+const configStore = new ConfigStore()
 
 const electronStoreApi = {
   versions: process.versions,
@@ -18,5 +14,5 @@ const electronStoreApi = {
     delete: (key: string) => configStore.delete(key),
     has: (key: string) => configStore.has(key),
   },
-};
-export default electronStoreApi;
+}
+export default electronStoreApi
